@@ -1,6 +1,6 @@
 # KaTeX Settings Editor
 
-Sets KaTeX settings.
+Sets KaTeX settings within RemNote.
 
 ## Usage
 
