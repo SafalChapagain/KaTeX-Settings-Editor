@@ -1,0 +1,21 @@
+{
+  "author": "safal",
+  "name": "KaTeX Settings Editor",
+  "description": "Allows KaTeX macros to be added",
+  "enableOnMobile": true,
+  "id": "safal-t7f9eug",
+  "manifestVersion": 1,
+  "repoUrl": "https://github.com/SafalChapagain/KaTeX-Settings-Editor",
+  "version": {
+    "major": 0,
+    "minor": 0,
+    "patch": 1
+  },
+  "requestNative": true,
+  "requiredScopes": [
+    {
+      "type": "All",
+      "level": "Read"
+    }
+  ]
+}

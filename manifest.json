@@ -1,0 +1,22 @@
+{
+    "manifestVersion": 1,
+    "id": "katex_editor",
+    "name": "KaTeX Editor",
+    "author": "Safal",
+    "repoUrl": "https://github.com/remnoteio/remnote-plugin-template-react",
+    "version": {
+      "major": 0,
+      "minor": 0,
+      "patch": 1
+    },
+    "theme": [],
+    "enableOnMobile": true,
+    "description": "Allows KaTeX settings to be set",
+    "requestNative": true,
+    "requiredScopes": [
+      {
+        "type": "All",
+        "level": "Read"
+      }
+    ]
+  }
