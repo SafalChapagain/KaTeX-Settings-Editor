@@ -1,0 +1,1 @@
+# KaTeX-Settings-Editor
