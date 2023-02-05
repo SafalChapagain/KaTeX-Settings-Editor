@@ -1,6 +1,6 @@
-# KaTeX Settings Setter
+# KaTeX Settings Editor
 
-Sets KATEX_SETTINGS for use with macros
+Sets KaTeX settings.
 
 ## Usage
 
