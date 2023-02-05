@@ -1,22 +1,22 @@
 {
-    "manifestVersion": 1,
-    "id": "katex_editor",
-    "name": "KaTeX Editor",
-    "author": "Safal",
-    "repoUrl": "https://github.com/remnoteio/remnote-plugin-template-react",
-    "version": {
-      "major": 0,
-      "minor": 0,
-      "patch": 1
-    },
-    "theme": [],
-    "enableOnMobile": true,
-    "description": "Allows KaTeX settings to be set",
-    "requestNative": true,
-    "requiredScopes": [
-      {
-        "type": "All",
-        "level": "Read"
-      }
-    ]
-  }
+  "author": "safal",
+  "name": "KaTeX Settings Editor",
+  "description": "Allows KaTeX macros to be added",
+  "enableOnMobile": true,
+  "id": "safal-t7f9eug",
+  "manifestVersion": 1,
+  "repoUrl": "https://github.com/SafalChapagain/KaTeX-Settings-Editor",
+  "version": {
+    "major": 0,
+    "minor": 0,
+    "patch": 1
+  },
+  "requestNative": true,
+  "unlisted": true,
+  "requiredScopes": [
+    {
+      "type": "All",
+      "level": "Read"
+    }
+  ]
+}

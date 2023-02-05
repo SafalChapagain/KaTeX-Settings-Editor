@@ -12,6 +12,7 @@
     "patch": 1
   },
   "requestNative": true,
+  "unlisted": true,
   "requiredScopes": [
     {
       "type": "All",
