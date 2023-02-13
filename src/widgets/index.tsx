@@ -38,7 +38,6 @@ async function onActivate(plugin: ReactRNPlugin) {
 
 async function onDeactivate(plugin: ReactRNPlugin) {
   //await plugin.app.unregisterWidget("katex_widget", WidgetLocation.RightSidebar);
-  await plugin.settings
 }
 
 declareIndexPlugin(onActivate, onDeactivate);
