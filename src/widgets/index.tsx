@@ -1,4 +1,4 @@
-import { declareIndexPlugin, ReactRNPlugin, WidgetLocation } from '@remnote/plugin-sdk';
+import { declareIndexPlugin, ReactRNPlugin, WidgetLocation, SettingEvents } from '@remnote/plugin-sdk';
 import '../style.css';
 import '../App.css';
 
@@ -17,11 +17,12 @@ async function onActivate(plugin: ReactRNPlugin) {
     defaultValue: "{}",
   });
 
-  if (!plugin.isNative)
-  {
-    await plugin.app.toast("Please retry in native mode!")
-  }
-  else
+  // if (!plugin.isNative)
+  // {
+  //   await plugin.app.toast("Please retry in native mode!")
+  // }
+ 
+  if(1)
   {
     try {
       window.KATEX_SETTINGS = JSON.parse(await plugin.settings.getSetting("katex_settings"));
@@ -34,15 +35,23 @@ async function onActivate(plugin: ReactRNPlugin) {
       console.error("Exception thrown", e.stack);
     }
   }
-}
-
-plugin.event.addListener(
-    AppEvents.SettingChanged,
+  
+  plugin.event.addListener(
+    SettingEvents.SettingChanged,
     "katex_settings",
-    ({ new_settings }) => {
-      window.KATEX_SETTINGS = JSON.parse(new_settings);
+    async () => {
+      try{
+        window.KATEX_SETTINGS = JSON.parse(await plugin.settings.getSetting("katex_settings"));
+        await plugin.app.toast("Loaded KaTex settings!");
+      }
+      catch (e: any){
+        await plugin.app.toast("Failed loading KaTex settings!"); 
+      }
     }
   );
+
+}
+
 
 async function onDeactivate(plugin: ReactRNPlugin) {
   //await plugin.app.unregisterWidget("katex_widget", WidgetLocation.RightSidebar);
