@@ -41,7 +41,7 @@ async function onActivate(plugin: ReactRNPlugin) {
     async () => {
       try{
         window.KATEX_SETTINGS = JSON.parse(await plugin.settings.getSetting("katex_settings"));
-        await plugin.app.toast("Loaded KaTex settings!");
+        await plugin.app.toast("Loaded KaTeX settings!");
       }
       catch (e: any){
         await plugin.app.toast("Failed loading KaTex settings!"); 
