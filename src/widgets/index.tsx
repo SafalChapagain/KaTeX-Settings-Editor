@@ -17,12 +17,11 @@ async function onActivate(plugin: ReactRNPlugin) {
     defaultValue: "{}",
   });
 
-  // if (!plugin.isNative)
-  // {
-  //   await plugin.app.toast("Please retry in native mode!")
-  // }
- 
-  if(1)
+  if (!plugin.isNative)
+  {
+    await plugin.app.toast("Please retry in native mode!")
+  }
+  else
   {
     try {
       window.KATEX_SETTINGS = JSON.parse(await plugin.settings.getSetting("katex_settings"));
