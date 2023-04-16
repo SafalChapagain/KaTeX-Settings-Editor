@@ -36,6 +36,14 @@ async function onActivate(plugin: ReactRNPlugin) {
   }
 }
 
+plugin.event.addListener(
+    AppEvents.SettingChanged,
+    "katex_settings",
+    ({ new_settings }) => {
+      window.KATEX_SETTINGS = JSON.parse(new_settings);
+    }
+  );
+
 async function onDeactivate(plugin: ReactRNPlugin) {
   //await plugin.app.unregisterWidget("katex_widget", WidgetLocation.RightSidebar);
 }
